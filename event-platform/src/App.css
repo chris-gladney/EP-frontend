@@ -94,6 +94,55 @@ li.header-item {
 h2.name {
   margin: auto;
   padding-top: 10px;
-  padding-bottom: 10px
+  padding-bottom: 10px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.basket-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10%;
+}
+
+.basket-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.basket-popup {
+  display: flex;
+  flex-direction: column;
+}
+
+.basket {
+  margin: auto;
+  text-align: center;
+}
+
+.basket-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.basket-item {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+
+input#quantity {
+  width: 30px;
+  height: 20px;
+}
+
+.quantity-div {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 

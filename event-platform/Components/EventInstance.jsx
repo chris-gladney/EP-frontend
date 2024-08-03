@@ -1,4 +1,4 @@
-const EventInstance = ({ event, admin }) => {
+const EventInstance = ({ event, admin, basket, setBasket }) => {
   return (
     <section className="event">
       <h2 className="name">{event.name}</h2>
@@ -7,8 +7,8 @@ const EventInstance = ({ event, admin }) => {
           <li>
             <h3>Location</h3>
           </li>
-          <li>{event.location.street}</li>
           <li>{event.location.streetNumber}</li>
+          <li>{event.location.street}</li>
           <li>{event.location.city}</li>
           <li>{event.location.postcode}</li>
         </ul>
@@ -21,7 +21,31 @@ const EventInstance = ({ event, admin }) => {
           <p>{event.price}</p>
         </div>
 
-        {!admin ? <button className="purchase-btn">Purchase</button> : ""}
+        {!admin ? (
+          <button
+            className="purchase-btn"
+            onClick={() => {
+              const eventToAddToBasket = JSON.parse(JSON.stringify(event));
+              eventToAddToBasket.numInBasket = 1;
+
+              setBasket((prevBasket) => {
+                basket.forEach((eventInBasket) => {
+                  if (eventInBasket.name === event.name) {
+                    eventToAddToBasket.numInBasket = eventInBasket.numInBasket + 1;
+                  }
+                });
+                const newBasket = prevBasket.filter(
+                  (prevEvent) => prevEvent.name !== eventToAddToBasket.name
+                );
+                return [...newBasket, eventToAddToBasket];
+              });
+            }}
+          >
+            Add to cart
+          </button>
+        ) : (
+          ""
+        )}
       </div>
     </section>
   );

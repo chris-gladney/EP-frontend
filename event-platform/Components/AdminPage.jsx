@@ -5,7 +5,7 @@ const AdminPage = () => {
   return (
     <>
       <AdminHeader />
-      <Events />
+      <Events admin={true} />
     </>
   );
 };

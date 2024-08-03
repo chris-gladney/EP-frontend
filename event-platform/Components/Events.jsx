@@ -1,7 +1,7 @@
 import { useState } from "react";
 import EventInstance from "./EventInstance";
 
-const Events = () => {
+const Events = ({ admin, basket, setBasket }) => {
   const eventsArray = [
     {
       name: "name1",
@@ -76,7 +76,15 @@ const Events = () => {
   return (
     <div className="events">
       {events.map((event) => {
-        return <EventInstance key={event.name} event={event} admin={false} />;
+        return (
+          <EventInstance
+            key={event.name}
+            event={event}
+            admin={admin}
+            basket={basket}
+            setBasket={setBasket}
+          />
+        );
       })}
     </div>
   );
