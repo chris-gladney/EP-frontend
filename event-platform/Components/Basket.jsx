@@ -26,8 +26,10 @@ const Basket = ({ setBasketOpened, basket, setBasket }) => {
         );
       })}
       <form className="basket-form">
-        <label htmlFor="add-to-calendar">Add to google calendar</label>
-        <input type="checkbox" id="add-to-calendar" name="add-to-calendar" />
+        <div className="google-calendar-add">
+          <label htmlFor="add-to-calendar">Add to google calendar</label>
+          <input type="checkbox" id="add-to-calendar" name="add-to-calendar" />
+        </div>
         <input type="submit" value="checkout" />
       </form>
     </div>

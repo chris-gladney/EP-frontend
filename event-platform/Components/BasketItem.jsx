@@ -11,6 +11,7 @@ const BasketItem = ({ event, basket, setBasket }) => {
     <div className="basket-item" key={event.name}>
       <h4 className="event-name">{event.name}</h4>
       <h4 className="event-price">{event.price}</h4>
+      <h4 className="event-date">{event.date}</h4>
       <div className="quantity-div">
         <label htmlFor="quantity">Quantity</label>
         <input type="number" id="quantity" name="quantity" min="0" />

@@ -125,13 +125,14 @@ a {
 
 .basket-form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .basket-item {
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 
 input#quantity {
@@ -146,3 +147,65 @@ input#quantity {
   margin-bottom: auto;
 }
 
+.google-calendar-add {
+  width: 50%;
+}
+
+.login {
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 50%;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+label.username,
+label.password {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+input.username,
+input.password {
+  margin-left: 20px;
+}
+
+.login-btn {
+  margin: 10px 20px 10px;
+
+  background-color: black;
+  color: white;
+}
+
+.welcome-sect h1 {
+  font-size: 30px;
+}
+
+.welcome-sect {
+  width: 50%;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: row;
+}
+
+.register, .already-registered {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.register h1 {
+  text-align: center;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  width: 33.33333%;
+  margin: auto;
+}
